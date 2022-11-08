@@ -1,0 +1,75 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Listbox</title>
+		<style>
+			* {
+				margin: 0;
+				padding: 0;
+				box-sizing: border-box;
+			}
+			*:focus-visible {
+				outline: 0.3rem solid darkorange;
+				outline-offset: 0.1rem;
+			}
+			.list {
+				height: 10rem;
+				background-color: blueviolet;
+				overflow-y: scroll;
+				margin: 1rem;
+			}
+			.item {
+				list-style: none;
+				padding-block: 0.3em;
+				padding-left: 1em;
+			}
+			.item:hover,
+			.item--selected {
+				background-color: indigo;
+				color: azure;
+			}
+			p {
+				margin: 1rem;
+			}
+			button {
+				display: flex;
+				padding: 0.5em;
+				margin: 1rem;
+				appearance: none;
+				border: none;
+				background-color: violet;
+				cursor: pointer;
+			}
+			button:hover {
+				color: whitesmoke;
+				background-color: rgb(198, 22, 198);
+			}
+		</style>
+		<script src="./Listbox.js" defer></script>
+	</head>
+	<body>
+		<div class="main"></div>
+		<ul class="list" tabindex="0" role="listbox">
+			<li class="item item--selected" aria-selected="true" role="option">
+				item 1
+			</li>
+			<li class="item" aria-selected="false" role="option">aitem 2</li>
+			<li class="item" aria-selected="false" role="option">aditem 2</li>
+			<li class="item" aria-selected="false" role="option">acitem 2</li>
+			<li class="item" aria-selected="false" role="option">bitem 3</li>
+			<li class="item" aria-selected="false" role="option">Citem 4</li>
+			<li class="item" aria-selected="false" role="option">Cditem 4</li>
+			<li class="item" aria-selected="false" role="option">Cfitem 4</li>
+			<li class="item" aria-selected="false" role="option">fitem 5</li>
+			<li class="item" aria-selected="false" role="option">jitem 6</li>
+			<li class="item" aria-selected="false" role="option">titem 7</li>
+			<li class="item" aria-selected="false" role="option">eitem 8</li>
+			<li class="item" aria-selected="false" role="option">uitem 9</li>
+			<li class="item" aria-selected="false" role="option">Zitem 10</li>
+		</ul>
+		<p class="selected-text"></p>
+		<button>click me</button>
+	</body>
+</html>

@@ -1,3 +1,3 @@
 ### ListBox
 
-listbox (select widget) with navigation manually configured
+listbox widget (select widget) with navigation manually configured

@@ -1,4 +1,4 @@
-const listbox = document.querySelector(".list");
+const listBox = document.querySelector(".listBox");
 const listItems = [...document.querySelectorAll(".item")];
 const pTag = document.querySelector(".selected-text");
 
@@ -83,7 +83,7 @@ const searchAndSet = (keysPressed, textToBeMatched, keysPressedHistory) => {
 
 		const next = activeItem.nextElementSibling;
 		//if active item = last item
-		//then perform check
+		//then perform a normal search
 		if (!next) {
 			performSearch();
 			return;
@@ -116,7 +116,7 @@ const searchAndSet = (keysPressed, textToBeMatched, keysPressedHistory) => {
 
 //----------------------------------------------------------------------------
 
-listbox.addEventListener("keydown", (e) => {
+listBox.addEventListener("keydown", (e) => {
 	const key = e.key.toLowerCase();
 	if (key === "arrowdown") {
 		e.preventDefault(); //prevent scroll
@@ -173,7 +173,7 @@ listbox.addEventListener("keydown", (e) => {
 	}
 });
 
-listbox.addEventListener("keydown", debounceSearch(searchAndSet, 150));
+listBox.addEventListener("keydown", debounceSearch(searchAndSet, 150));
 
 //-------------------------- unrelated ---------------------------------
 // const btn = document.querySelector("button");
